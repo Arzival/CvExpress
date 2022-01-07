@@ -56,6 +56,59 @@
                 </div>
             </div>
         </div>
+        <h3 class="subtitulo">Datos Académicos</h3>
+        <div class="form-registro-cv">
+            <div class="row">
+                <div class="form-group col-md-4 col-md-2">
+                    <label for="exampleInputEmail1">Nivel de estudios</label>
+                    <select name="nivel_estudios" id="nivel_estudios" class="form-control">
+                        <option value="">Seleccione un nivel</option>
+                        <option value="1">Nivel 1</option>
+                        <option value="2">Nivel 2</option>
+                        <option value="3">Nivel 3</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4 col-md-2">
+                    <label for="exampleInputEmail1">Nombre de la institución</label>
+                    <input class="form-control" type="text" name="nombre_institucion">
+                </div>
+                <div class="form-group col-md-4 col-md-2">
+                    <label for="exampleInputEmail1">Fecha de egreso</label>
+                    <input class="form-control" type="date" name="fecha_egreso">
+                </div>
+            </div>
+        </div>
+        <div class=" form-registro-cv">
+            <div class="row">
+                <div class="col-md-6 ">
+                    <h3 class="form-group col-md-6 subtitulo">Aptitudes</h3>
+                    <small class="text-small">Proactividad, Trabajo en equipo, Disciplina ...</small>
+                    <div class="">
+                        <div class="row">
+                            <div class="form-group col-md-12 col-md-4">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <input class="form-control" type="text" name="{{ 'aptitud' . $i }}">
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 colright">
+                    <h3 class="form-group col-md-6 subtitulo">Conocimientos</h3>
+                    <small class="text-small">Recuerda poner solo lo necesario para el puesto que estas aplicando, menos
+                        es más</small>
+                    <div class="">
+                        <div class="row">
+                            <div class="form-group col-md-12 col-md-4">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <input class="form-control" type="text" name="{{ 'conocimiento' . $i }}">
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <button class="btn btn-primary" type="submit">Guardar</button>
     </form>
 @endsection

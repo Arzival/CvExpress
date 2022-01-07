@@ -35,8 +35,8 @@ class CVController extends Controller
      */
     public function store(Request $request)
     {
-        $foto['file'] = time() . '_' . $request->file('file')->getClientOriginalName();
-        $request->file('file')->storeAs('public/foto', $foto['file']);
+        // $foto['file'] = time() . '_' . $request->file('file')->getClientOriginalName();
+        // $request->file('file')->storeAs('public/foto', $foto['file']);
         return $request;
     }
 

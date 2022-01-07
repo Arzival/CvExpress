@@ -3,12 +3,14 @@ body {
   color: #fff;
   margin: 0%;
 }
+
 .titulo {
   font-size: 4em;
   font-weight: bold;
   text-align: center;
   margin-top: 3%;
 }
+
 .subtitulo {
   font-size: 2em;
   font-weight: bold;
@@ -19,3 +21,12 @@ body {
 .form-registro-cv {
   margin: 2%;
 }
+
+.colright {
+  float: right;
+}
+
+.text-small {
+  margin: 2%;
+}
+
