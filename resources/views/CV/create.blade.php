@@ -80,34 +80,79 @@
         </div>
         <div class=" form-registro-cv">
             <div class="row">
-                <div class="col-md-6 ">
-                    <h3 class="form-group col-md-6 subtitulo">Aptitudes</h3>
+                <div class="col-md-4 ">
+                    <h3 class="form-group col-md-4 subtitulo">Aptitudes</h3>
                     <small class="text-small">Proactividad, Trabajo en equipo, Disciplina ...</small>
                     <div class="">
                         <div class="row">
                             <div class="form-group col-md-12 col-md-4">
                                 @for ($i = 1; $i <= 5; $i++)
-                                    <input class="form-control" type="text" name="{{ 'aptitud' . $i }}">
+                                    <input class="form-control" type="text" name="{{ 'aptitud' . $i }}"
+                                        placeholder="{{ 'Aptitud ' . $i }}">
                                 @endfor
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 colright">
-                    <h3 class="form-group col-md-6 subtitulo">Conocimientos</h3>
-                    <small class="text-small">Recuerda poner solo lo necesario para el puesto que estas aplicando, menos
-                        es más</small>
+                <div class="col-md-4 colright">
+                    <h3 class="form-group col-md-4 subtitulo">Conocimientos</h3>
+                    <small class="text-small">Recuerda poner solo lo necesario para el puesto que estas
+                        aplicando.</small>
                     <div class="">
                         <div class="row">
                             <div class="form-group col-md-12 col-md-4">
                                 @for ($i = 1; $i <= 5; $i++)
-                                    <input class="form-control" type="text" name="{{ 'conocimiento' . $i }}">
+                                    <input class="form-control" type="text" name="{{ 'conocimiento' . $i }}"
+                                        placeholder="{{ 'Conocimiento ' . $i }}">
+                                @endfor
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <h3 class="form-group col-md-4 subtitulo">Idiomas</h3>
+                    <small class="text-small">Se recomienda al menos poner 2 idiomas.</small>
+                    <div class="">
+                        <div class="row">
+                            <div class="form-group col-md-12 col-md-4">
+                                @for ($i = 1; $i <= 5; $i++)
+                                    <input class="form-control" type="text" name="{{ 'idioma' . $i }}"
+                                        placeholder="{{ 'Idioma ' . $i }}">
                                 @endfor
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+        <h3 class="subtitulo">Experiencia Laboral</h3>
+        <div class="form-registro-cv">
+            @for ($i = 1; $i <= 5; $i++)
+                <div class="row">
+                    <div class="form-group col-md-3 col-md-2">
+                        <label for="exampleInputEmail1">Empresa {{ $i }}</label>
+                        <input class="form-control" type="text" name="{{ 'empresa' . $i }}">
+                    </div>
+                    <div class="form-group col-md-3 col-md-2">
+                        <label for="exampleInputEmail1">Puesto {{ $i }}</label>
+                        <input class="form-control" type="text" name="{{ 'puesto' . $i }}">
+                    </div>
+                    <div class="form-group col-md-3 col-md-2">
+                        <label for="exampleInputEmail1">Fecha de ingreso {{ $i }}</label>
+                        <input class="form-control" type="date" name="{{ 'fecha_ingreso' . $i }}">
+                    </div>
+                    <div class="form-group col-md-3 col-md-2">
+                        <label for="exampleInputEmail1">Fecha de egreso {{ $i }}</label>
+                        <input class="form-control" type="date" name="{{ 'fecha_egreso' . $i }}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12 col-md-4">
+                        <label for="exampleInputEmail1">Descripción del puesto {{ $i }}</label>
+                        <textarea class="form-control" name="{{ 'descripcion_puesto' . $i }}"></textarea>
+                    </div>
+                </div>
+            @endfor
         </div>
         <button class="btn btn-primary" type="submit">Guardar</button>
     </form>
