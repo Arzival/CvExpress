@@ -4,6 +4,10 @@ body {
   margin: 0%;
 }
 
+.test{
+  background: yellow;
+}
+
 .titulo {
   font-size: 4em;
   font-weight: bold;
@@ -28,5 +32,9 @@ body {
 
 .text-small {
   margin: 2%;
+}
+
+.button-center {
+  text-align: center;
 }
 

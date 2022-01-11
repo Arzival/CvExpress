@@ -154,6 +154,8 @@
                 </div>
             @endfor
         </div>
-        <button class="btn btn-primary" type="submit">Guardar</button>
+        <div class="form-registro-cv col-md-12 col-md-4 button-center">
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar Datos</button>
+        </div>
     </form>
 @endsection

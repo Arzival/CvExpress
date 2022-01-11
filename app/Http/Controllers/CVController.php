@@ -14,7 +14,7 @@ class CVController extends Controller
      */
     public function index()
     {
-        //
+        CV::orderBY('id', 'desc')->get();
     }
 
     /**
