@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\CV;
 use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade as PDF;
 
 class CVController extends Controller
 {
@@ -24,7 +25,9 @@ class CVController extends Controller
      */
     public function create()
     {
-        return view('CV.create');
+        $estilos = ['GalaxySlayer','Deboneir','Overdosin'];
+        $niveles_estudios = ['Primaria','Secundaria','Bachillerato','Licenciatura','Maestria','Doctorado'];
+        return view('CV.create', compact('estilos','niveles_estudios'));
     }
 
     /**
@@ -89,6 +92,8 @@ class CVController extends Controller
             'fecha_ingreso5' => $request['fecha_ingreso5'],
             'fecha_egreso5' => $request['fecha_egreso5'],
             'descripcion_puesto5' => $request['descripcion_puesto5'],
+
+            'user_id' => auth()->user()->id,
         ]);
         
         return redirect()->route('home');

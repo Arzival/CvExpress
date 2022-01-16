@@ -1,6 +1,9 @@
 @extends('layouts.plantilla')
 @section('contenido')
     <h1 class="titulo">Creación de CV</h1>
+    <div class="form-registro-cv col-md-12 col-md-4 button-rigth">
+        <button class="btn btn-secondary btn-lg btn-block">Regresar</button>
+    </div>
     <h3 class="subtitulo">Datos Generales</h3>
     <form action="{{ route('cv.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
@@ -9,10 +12,11 @@
                 <div class="form-group col-md-4 col-md-2">
                     <label for="exampleInputEmail1">Estilo</label>
                     <select name="estilo" id="estilo" class="form-control">
-                        <option value="">Seleccione un estilo</option>
-                        <option value="1">Estilo 1</option>
-                        <option value="2">Estilo 2</option>
-                        <option value="3">Estilo 3</option>
+                        <option selected value="">Seleccione un estilo</option>
+                        @foreach ($estilos as $estilo)
+                            <option value="{{ $estilo }}">{{ $estilo }}</option>
+
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-4 col-md-2">
@@ -62,10 +66,11 @@
                 <div class="form-group col-md-4 col-md-2">
                     <label for="exampleInputEmail1">Nivel de estudios</label>
                     <select name="nivel_estudios" id="nivel_estudios" class="form-control">
-                        <option value="">Seleccione un nivel</option>
-                        <option value="1">Nivel 1</option>
-                        <option value="2">Nivel 2</option>
-                        <option value="3">Nivel 3</option>
+                        <option selected value="">Seleccione un nivel</option>
+                        @foreach ($niveles_estudios as $nivel_estudio)
+                            <option value="{{ $nivel_estudio }}">{{ $nivel_estudio }}</option>
+
+                        @endforeach
                     </select>
                 </div>
                 <div class="form-group col-md-4 col-md-2">

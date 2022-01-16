@@ -71,6 +71,9 @@ class CreateCVSTable extends Migration
             $table->date('fecha_ingreso5')->nullable();
             $table->date('fecha_egreso5')->nullable();
             $table->string('descripcion_puesto5')->nullable();
+
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             
             $table->timestamps();
         });
