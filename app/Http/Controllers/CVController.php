@@ -15,7 +15,8 @@ class CVController extends Controller
      */
     public function index()
     {
-        CV::orderBY('id', 'desc')->get();
+       $cvs = CV::orderBY('id', 'desc')->where('user_id', auth()->user()->id)->simplepaginate(10);
+        return view('CV.index', compact('cvs'));
     }
 
     /**
@@ -96,7 +97,7 @@ class CVController extends Controller
             'user_id' => auth()->user()->id,
         ]);
         
-        return redirect()->route('home');
+        return redirect()->route('cv.index');
     }
 
     /**
@@ -116,9 +117,9 @@ class CVController extends Controller
      * @param  \App\Models\CV  $cV
      * @return \Illuminate\Http\Response
      */
-    public function edit(CV $cV)
+    public function edit(CV $cv)
     {
-        //
+        return $cv;
     }
 
     /**

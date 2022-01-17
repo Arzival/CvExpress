@@ -2,7 +2,7 @@
 @section('contenido')
     <h1 class="titulo">Creación de CV</h1>
     <div class="form-registro-cv col-md-12 col-md-4 button-rigth">
-        <button class="btn btn-secondary btn-lg btn-block">Regresar</button>
+        <a href="{{ route('home') }}"><button class="btn btn-secondary btn-lg btn-block">Regresar</button></a>
     </div>
     <h3 class="subtitulo">Datos Generales</h3>
     <form action="{{ route('cv.store') }}" method="POST" enctype="multipart/form-data">
