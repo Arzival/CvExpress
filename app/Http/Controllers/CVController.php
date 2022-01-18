@@ -119,7 +119,9 @@ class CVController extends Controller
      */
     public function edit(CV $cv)
     {
-        return $cv;
+        $estilos = ['GalaxySlayer','Deboneir','Overdosin'];
+        $niveles_estudios = ['Primaria','Secundaria','Bachillerato','Licenciatura','Maestria','Doctorado'];
+        return view('cv.edit', compact('cv','estilos','niveles_estudios'));
     }
 
     /**
