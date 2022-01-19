@@ -29,6 +29,7 @@
                     <button class="btn btn-danger" type="submit">Eliminar</button>
                 </form>
                 <a class="btn btn-warning" href="{{ route('cv.edit', $cv->id) }}">Editar</a>
+                <a class="btn btn-info" href="{{ route('cv.show', $cv->id) }}">Ver PDF</a>
             </td>
         </tr>
         @endforeach

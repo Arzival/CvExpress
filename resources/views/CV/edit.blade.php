@@ -5,8 +5,8 @@
         <a href="{{ route('home') }}"><button class="btn btn-secondary btn-lg btn-block">Regresar</button></a>
     </div>
     <h3 class="subtitulo">Datos Generales</h3>
-    <form action="{{ route('cv.store') }}" method="POST" enctype="multipart/form-data">
-        @csrf
+    <form action="{{ route('cv.update',$cv) }}" method="POST" enctype="multipart/form-data">
+        @csrf @method('PATCH')
         <div class="form-registro-cv">
             <div class="row">
                 <div class="form-group col-md-4 col-md-2">
