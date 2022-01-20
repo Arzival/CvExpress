@@ -26,6 +26,13 @@ body {
   margin: 2%;
 }
 
+.form-login{
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .colright {
   float: right;
 }
@@ -36,6 +43,10 @@ body {
 
 .button-center {
   text-align: center;
+}
+
+.button-center-form {
+  margin: 4%;
 }
 
 .button-rigth {
