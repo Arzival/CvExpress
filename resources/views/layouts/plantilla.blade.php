@@ -20,12 +20,9 @@
 </head>
 
 <body>
-<div class="row">
           <div class="col-md-12 col-md-8 col-md-5">
                     @yield('contenido')
           </div>
-</div>
-
           <script src="{{ asset('js/scripts.js') }}"></script>
           <script src="{{ asset('js/app.js') }}" ></script>
 </body>

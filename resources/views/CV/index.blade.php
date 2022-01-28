@@ -2,6 +2,7 @@
 
 @section('contenido')
 
+   <div class="container">
     <h1>hola, bienvenido {{ auth()->user()->name }}</h1>
     <form action="{{ route('cv.create') }}">
         <button class="btn btn-primary" type="submit">Crear CV</button>
@@ -51,6 +52,7 @@
         </table>
     </div>
     {{ $cvs->links() }}
+   </div>
 @endsection
 
 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

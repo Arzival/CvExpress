@@ -1,9 +1,9 @@
 @extends('layouts.plantilla')
-
 @section('contenido')
-<div class="">
+<div class="container">
+<div class="row">
     <h1>vista de inicio</h1>
-    <div id="example"></div>
+    <a href="{{ route('login') }}">Iniciar Sesion</a>
 </div>
-<a href="{{ route('login') }}">Iniciar Sesion</a>
+</div>
 @endsection
