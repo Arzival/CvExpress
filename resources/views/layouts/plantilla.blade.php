@@ -16,7 +16,8 @@
         crossorigin="anonymous"></script>
         <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
         @yield('styles')
-    <title>Document</title>
+        <link rel="shortcut icon" href="{{ asset('img/icono.png') }}" type="image/x-icon">
+    <title>CV Express</title>
 </head>
 
 <body>
