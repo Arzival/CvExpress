@@ -109,7 +109,7 @@ class CVController extends Controller
     public function show(CV $cv)
     {
         $estilo = $cv->estilo;
-        $pdf = PDF::loadView('CV.show', compact('cv'));
+        $pdf = PDF::loadView('PDF.debonair', compact('cv'));
         return $pdf->stream();
     }
 

@@ -1,5 +1,6 @@
 @extends('layouts.plantilla')
 @section('contenido')
+<div class="container">
     <h1 class="titulo">Edición de CV</h1>
     <div class="form-registro-cv col-md-12 col-md-4 button-rigth">
         <a href="{{ route('home') }}"><button class="btn btn-secondary btn-lg btn-block">Regresar</button></a>
@@ -260,4 +261,5 @@
             <button type="submit" class="btn btn-primary btn-lg btn-block">Guardar Datos</button>
         </div>
     </form>
+</div>
 @endsection
