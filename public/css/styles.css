@@ -23,6 +23,13 @@ body {
   margin-left: 2%;
 }
 
+.parrafo {
+  font-size: 1.5em;
+  font-weight: bold;
+  text-align: left;
+  margin-left: 2%;
+}
+
 .form-registro-cv {
   margin: 2%;
 }
@@ -33,6 +40,15 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+/*form-register*/
+.form-register {
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 .colright {
   float: right;
@@ -45,6 +61,7 @@ body {
 .button-center {
   text-align: center;
 }
+
 
 .button-center-form {
   margin: 4%;
@@ -61,4 +78,23 @@ text-align: right;
   padding-left: 10%;
   padding-right: 10%;
   padding-bottom: 2%;
+}
+
+/* imagen de cv*/
+.img-cv {
+  width: 100%;
+  height: auto;
+}
+
+/*footer centrado*/
+.footer {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+/*link footer*/
+.link-footer {
+  text-decoration: none;
+  color: #fff;
 }

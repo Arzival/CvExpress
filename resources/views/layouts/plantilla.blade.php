@@ -27,5 +27,23 @@
           <script src="{{ asset('js/scripts.js') }}"></script>
           <script src="{{ asset('js/app.js') }}" ></script>
 </body>
+<footer
+    class="page-footer footer">
+    <div class="container-fluid text-center text-md-left">
+        <div class="row">
+            <div class="col-md-12">
+                <h5 class="text-uppercase">CV Express</h5>
+                <p>
+                    Proyecto creado por <a class="link-footer" target="_blanc" href="https://arzivall.com">Armando Reyes</a> usando Laravel, Bootstrap y ♥.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright text-center py-3">
+        © 2020 Copyright:
+        <a class="link-footer" target="_blanc" href="https://arzivall.com"> Arzivall</a>
+    </div>
+</footer>
+
 
 </html>
