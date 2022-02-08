@@ -1,5 +1,33 @@
-body{
-    background: yellow;
+body {
+    background: white;
     margin: 0%;
     padding: 0%;
+}
+.color1 {
+    color: #0c0907;
+}
+.color2 {
+    color: #1b2f39;
+}
+.color3 {
+    color: #ad7690;
+}
+.color4 {
+    color: #e0ccc4;
+}
+.color5 {
+    color: #eff3e4;
+}
+
+.name-cv {
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 3%;
+}
+
+.foto-cv {
+    width: 100%;
+    height: auto;
+    margin-top: 3%;
 }
