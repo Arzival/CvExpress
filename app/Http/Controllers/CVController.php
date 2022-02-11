@@ -27,7 +27,7 @@ class CVController extends Controller
     public function create()
     {
         $estilos = ['GalaxySlayer','Deboneir','Overdosin'];
-        $niveles_estudios = ['Primaria','Secundaria','Bachillerato','Licenciatura','Maestria','Doctorado'];
+        $niveles_estudios = ['Primaria','Secundaria','Bachillerato','Licenciatura','Maestria','Doctorado','Otro'];
         return view('CV.create', compact('estilos','niveles_estudios'));
     }
 
@@ -39,6 +39,16 @@ class CVController extends Controller
      */
     public function store(Request $request)
     {
+        $rules = [
+            'file' => "required|image|mimes:jpeg,png|max:5000",
+        ];
+        $messages = [
+            'file.required' => 'Es necesario que subas una imagen',
+            'file.image' => 'El archivo debe ser una imagen',
+            'file.mimes' => 'El archivo debe ser una imagen',
+            'file.max' => 'El archivo debe pesar maximo 5MB',
+        ];
+        $this->validate($request, $rules, $messages);
         $foto['file'] = time() . '_' . $request->file('file')->getClientOriginalName();
         $request->file('file')->storeAs('public/foto', $foto['file']);
         CV::create([

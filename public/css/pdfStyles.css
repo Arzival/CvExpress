@@ -21,13 +21,33 @@ body {
 
 .name-cv {
     font-size: 2em;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 3%;
+    position: absolute;
+    width: auto;
+    height: 14px;
+    left: 200px;
+    top: 10px;
 }
 
 .foto-cv {
     width: 100%;
-    height: auto;
-    margin-top: 3%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.marco > .foto-cv {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    left: 0px;
+    top: 0px;
+    background: #e0ccc4;
+    border-radius: 87.5px;
+}
+
+.marco-sup{
+    width: 100%;
+    height: 175px;
+    left: -10px;
+    top: 0px;
+    background: #e0ccc4;
 }
