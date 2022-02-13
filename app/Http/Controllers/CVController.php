@@ -40,13 +40,21 @@ class CVController extends Controller
     public function store(Request $request)
     {
         $rules = [
+            'estilo' => 'required',
             'file' => "required|image|mimes:jpeg,png|max:5000",
+            'nombre' => 'required|string|max:30',
+            'apellidos' => 'required|string|max:60',
+            'edad' => 'required|integer|max:100',
         ];
         $messages = [
+            'estilo.required' => 'El campo estilo es obligatorio',
             'file.required' => 'Es necesario que subas una imagen',
             'file.image' => 'El archivo debe ser una imagen',
             'file.mimes' => 'El archivo debe ser una imagen',
             'file.max' => 'El archivo debe pesar maximo 5MB',
+            'nombre.required' => 'El nombre es requerido',
+            'apellidos.required' => 'Los apellidos son requeridos',
+            'edad.required' => 'La edad es requerida',
         ];
         $this->validate($request, $rules, $messages);
         $foto['file'] = time() . '_' . $request->file('file')->getClientOriginalName();

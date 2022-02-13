@@ -19,6 +19,12 @@
             <img class="foto-cv" src="{{ asset('storage/foto/' . $cv->file) }}" alt="">
         </div>
     </div>
+    <div class="marco-left">
+        <h3 class="aptitudes color2">
+            Aptitudes:
+        </h3>
+        <h4 class="aptitudes-cv color3">{{ $cv->aptitud1 ? $cv->aptitud1 . ', ' : '' }}{{ $cv->aptitud2 ? $cv->aptitud2 . ', ' : ''}}{{ $cv->aptitud3 ? $cv->aptitud3 . ', ' : ''}}{{ $cv->aptitud4 ? $cv->aptitud4 . ', ' : ''}}{{ $cv->aptitud5 ? $cv->aptitud5 . '.' : ''}}</h4>
+    </div>
 </body>
 
 </html>
